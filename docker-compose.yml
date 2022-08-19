@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  safelabs-back-js:
+    container_name: safelabs-back-js
+    environment:
+      - PORT=${PORT:-3001}
+      - WEATHER_API_KEY
+      - SPOTIFY_API_ID
+      - SPOTIFY_API_SECRET
+    build:
+      context: .
+      dockerfile: DockerFile
+    ports:
+      - "${PORT:-3001}:${PORT:-3001}"
