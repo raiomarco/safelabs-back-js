@@ -32,7 +32,7 @@ function getTemperature(options) {
  * Get song list by genre.
  *
  * @param {string} genre
- * @returns {string[]} songs list
+ * @returns {Promise<string[]>} songs list
  * @throws if genre not informed or api is down
  */
 function getSongs(genre) {
